@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #000000d5;
+        color: #fff;
+    }
+</style>
+
+<body>
+<table class="table table-striped table-dark">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">picture url</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user, state: ${userList}">
+        <td th:text="${state.count}"></td>
+        <td th:text="${user.getName}"></td>
+        <td th:text="${user.getEmail}"></td>
+        <td th:text="${user.getPicture()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

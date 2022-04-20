@@ -1,0 +1,40 @@
+jwt:
+  secretKey: SupperKey
+  expireTime: 86400000
+server:
+  port: 8085
+  error:
+    include-message: always
+spring:
+  sql:
+    init:
+      mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: Aziz20034843
+    url: jdbc:postgresql://localhost:5432/exam_SS
+
+
+
+#
+#spring:
+#  application:
+#    name: spring-boot-facebook-oauth-demo
+#
+#security:
+#  oauth2:
+#    client:
+#      clientId: 1166325220852290
+#      clientSecret: 999b69d205cf1b59fe58df675af50dba
+#      accessTokenUri: https://graph.facebook.com/oauth/access_token
+#      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#      tokenName: oauth_token
+#      authenticationScheme: query
+#      clientAuthenticationScheme: form
+#    resource:
+#      userInfoUri: https://graph.facebook.com/me
